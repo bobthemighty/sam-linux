@@ -1,0 +1,30 @@
+Please tell me you didn't type out the name of this file!
+
+We've finished the first part of your tutorial. Now you can navigate around folders, 
+use ls and tab completion to see what is available, and use cat to read the content of files.
+
+One last command before we start turning this machine into something a bit more useable.
+
+`sudo` grants you super-powers. 
+
+Right now you're logged in as "sam". Sam is a normal user, and is forbidden from doing things
+that might break the computer.
+
+There is special user on the computer called `root`. The root user is allowed to do *anything* 
+he likes.
+
+You can temporarily become the root user by using sudo. The 04 folder is locked, and only root can read it.
+
+use `sudo ls ~/04` to see what files are in there, and then use sudo to cat the file that you find. 
+
+If you try to read or edit a file that "sam" isn't allowed to touch, you'll get a 'permission denied' error. 
+
+When that happens, you can use 'sudo' in front of your command, for example
+
+```
+bob@made-lt051:~|⇒  cat badgers.md 
+cat: badgers.md: Permission denied
+
+bob@made-lt051:~|⇒  sudo cat badgers.md 
+This is the content of the badgers file.
+```
